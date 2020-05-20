@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-SetRequest">
+    <DisplayName>AM-SetRequest</DisplayName>
+    <Properties/>
+    <Set>
+        <QueryParams>
+            <QueryParam name="SAMLRequest">{samlRequest}</QueryParam>
+        </QueryParams>
+    </Set>
+    <AssignVariable>
+        <Name>target.pathsuffix</Name>
+        <Value>false</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JavaCallout name="JAVA-Generate-SAML-Request">
+    <ClassName>com.apigee.callout.GenerateSAMLRequest</ClassName>
+    <ResourceURL>java://edge-custom-policy-saml-request.jar</ResourceURL>
+    <Properties>
+        <Property name="AssertionConsumerServiceURL">{AssertionConsumerServiceURL}</Property>
+        <Property name="Destination">{Destination}</Property>
+        <Property name="ID">{ID}</Property>
+        <Property name="Issuer">{Issuer}</Property>
+        <Property name="urlencode">false</Property>
+    </Properties>
+</JavaCallout>

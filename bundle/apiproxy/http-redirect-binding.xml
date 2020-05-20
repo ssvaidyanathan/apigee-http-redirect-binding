@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="http-redirect-binding">
+    <Basepaths>/samlrequest</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1589938127779</CreatedAt>
+    <CreatedBy>ssvaidyanathan@google.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>SAMLRequest</DisplayName>
+    <LastModifiedAt>1589938127779</LastModifiedAt>
+    <LastModifiedBy>ssvaidyanathan@google.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:ea420370fff07f9a33bab97ae6633de46fd2d432fe9cf5918660a6fca0265571b4075774b42cad74b11c249d1dcd46e7092de0aeeac6414b22506788837cf387</ManifestVersion>
+    <Policies>
+        <Policy>AM-Set-SAML-Params</Policy>
+        <Policy>AM-SetRequest</Policy>
+        <Policy>JAVA-Generate-SAML-Request</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>java://edge-custom-policy-saml-request.jar</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
