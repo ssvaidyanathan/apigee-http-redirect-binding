@@ -66,7 +66,7 @@ Preparation, first time only: `./buildsetup.sh`
 		curl --location --request GET 'https://{org}-{env}.apigee.net/saml/redirect_binding'
 	```
 - In the response you will see the `SAMLRequest` under `args`
-- You can test `SAMLRequest` using [this tool](https://www.samltool.com/decode.php)
+- You can test the generated `SAMLRequest` using [this tool](https://www.samltool.com/decode.php)
 
 ## License
 
