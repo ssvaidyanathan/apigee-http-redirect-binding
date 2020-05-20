@@ -2,8 +2,12 @@
 - This is a sample Apigee proxy to generate the [HTTP Redirect binding](https://en.wikipedia.org/wiki/SAML_2.0#HTTP_Redirect_Binding) query parameter using a [Java callout policy](https://docs.apigee.com/api-platform/reference/policies/java-callout-policy). In this example, the following payload is considered - 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<saml2p:AuthnRequest xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol" AssertionConsumerServiceURL="https://apis-lab.intel.com/auth/v1/saml/acs" Destination="https://sfederationpreprod.intel.com/affwebservices/public/saml2sso" ForceAuthn="false" ID="_72c6363907be31ebe16fcb1b1ff7f2ce" IsPassive="false" IssueInstant="2020-05-20T02:26:44.710Z" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Version="2.0">
-   <saml2:Issuer xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion" Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity">https://apis-lab.intel.com/auth/v1/saml</saml2:Issuer>
+<saml2p:AuthnRequest xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol" 
+		     AssertionConsumerServiceURL="http://sp.example.com/demo1/index.php?acs" 
+		     Destination="http://idp.example.com/SSOService.php" ForceAuthn="false" 
+		     ID="_809707f0030a5d00620c9d9df97f627afe9dcc24" IsPassive="false" IssueInstant="2020-05-20T02:26:44.710Z" 
+		     ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Version="2.0">
+   <saml2:Issuer xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion" Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity">https://apis.example.com/auth/v1/saml</saml2:Issuer>
 </saml2p:AuthnRequest>
 ```
 - The values for `AssertionConsumerServiceURL`, `Destination`, `ID`, `Issuer` are externalized using the AssignMessage policy in this example and then passed as properties to the Java Callout policy. You could use KVM to fetch these values dynamically and pass it to the Java Callout
