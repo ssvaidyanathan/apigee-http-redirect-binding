@@ -30,10 +30,10 @@ public class GenerateSAMLRequest implements Execution {
 	}
 	
 	public static void main(String[] args) throws Exception{
-		System.out.println(generateDeflatedAndBase64EncodedString("https://apis-lab.intel.com/auth/v1/saml/acs",
-				"https://sfederationpreprod.intel.com/affwebservices/public/saml2sso",
-				"_72c6363907be31ebe16fcb1b1ff7f2ce", Instant.now().toString(),
-				"https://apis-lab.intel.com/auth/v1/saml", false));
+		System.out.println(generateDeflatedAndBase64EncodedString("http://sp.example.com/demo1/index.php?acs",
+				"http://idp.example.com/SSOService.php",
+				"_809707f0030a5d00620c9d9df97f627afe9dcc24", Instant.now().toString(),
+				"https://apis.example.com/auth/v1/saml", false));
 	}
 
 	/**
