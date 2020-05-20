@@ -5,6 +5,7 @@
     <Set>
         <QueryParams>
             <QueryParam name="SAMLRequest">{samlRequest}</QueryParam>
+            <QueryParam name="RelayState">{messageid}</QueryParam>
         </QueryParams>
     </Set>
     <AssignVariable>
