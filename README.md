@@ -30,7 +30,7 @@ Preparation, first time only: `./buildsetup.sh`
 ### Deploy Apigee proxy
 - Go to the `bundle` directory
 - Execute `mvn clean install -P{profile} -Dorg={org} -Dusername={username} -Dpassword={password}`
-- The above command should deploy the proxy. 
+- The above command should deploy the proxy as `http-redirect-binding`. 
 - The proxy is pointing to httpbin.org/get for now. Please update it as per your needs
 - To test, run the following curl
 	```
