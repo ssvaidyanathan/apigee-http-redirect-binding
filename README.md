@@ -12,6 +12,22 @@
 ```
 - The values for `AssertionConsumerServiceURL`, `Destination`, `ID`, `Issuer` are externalized using the AssignMessage policy in this example and then passed as properties to the Java Callout policy. You could use KVM to fetch these values dynamically and pass it to the Java Callout
 
+- Java callout takes the following properties:
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JavaCallout name="JAVA-Generate-SAML-Request">
+    <ClassName>com.apigee.callout.GenerateSAMLRequest</ClassName>
+    <ResourceURL>java://edge-custom-policy-saml-request.jar</ResourceURL>
+    <Properties>
+        <Property name="AssertionConsumerServiceURL">{AssertionConsumerServiceURL}</Property>
+        <Property name="Destination">{Destination}</Property>
+        <Property name="ID">{ID}</Property>
+        <Property name="Issuer">{Issuer}</Property>
+        <Property name="urlencode">false</Property>
+    </Properties>
+</JavaCallout>
+```
+
 - If the above payload needs to be changed, please modify the [GenerateSAMLRequest Java class](./callout/src/main/java/com/apigee/callout/GenerateSAMLRequest.java) and then follow the steps below to build the jar
 
 ## Pre-Requisites
