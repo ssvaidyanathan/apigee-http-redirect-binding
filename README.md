@@ -23,7 +23,7 @@
         <Property name="Destination">{Destination}</Property>
         <Property name="ID">{ID}</Property>
         <Property name="Issuer">{Issuer}</Property>
-        <Property name="urlencode">false</Property> <!--true if you want to URL Encode -->
+        <Property name="urlencode">false</Property> <!-- true if you want to URL Encode -->
     </Properties>
 </JavaCallout>
 ```
@@ -66,7 +66,7 @@ Preparation, first time only: `./buildsetup.sh`
 		curl --location --request GET 'https://{org}-{env}.apigee.net/saml/redirect_binding'
 	```
 - In the response you will see the `SAMLRequest` under `args`
-
+- You can test `SAMLRequest` using [this tool](https://www.samltool.com/decode.php)
 
 ## License
 
