@@ -23,7 +23,7 @@
         <Property name="Destination">{Destination}</Property>
         <Property name="ID">{ID}</Property>
         <Property name="Issuer">{Issuer}</Property>
-        <Property name="urlencode">false</Property>
+        <Property name="urlencode">false</Property> <!--true if you want to URL Encode -->
     </Properties>
 </JavaCallout>
 ```
