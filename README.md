@@ -1,5 +1,5 @@
 # apigee-http-redirect-binding
-This is a sample Apigee proxy to generate the HTTP Redirect binding
+This is a sample Apigee proxy to generate the [HTTP Redirect binding](https://en.wikipedia.org/wiki/SAML_2.0#HTTP_Redirect_Binding)
 
 ## Pre-Requisites
 
